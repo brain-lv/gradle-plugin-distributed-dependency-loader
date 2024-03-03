@@ -13,6 +13,7 @@ plugins {
 
 repositories {
     // Use Maven Central for resolving dependencies.
+    gradlePluginPortal()
     mavenCentral()
 }
 
@@ -57,3 +58,14 @@ tasks.named('check') {
     // Include functionalTest as part of the check lifecycle
     dependsOn(testing.suites.functionalTest)
 }
+
+// Configure the Gradle Plugin Development plugin
+/*
+pluginBundle {
+    vcsUrl = 'https://github.com/brain-lv/gradle-plugin-distributed-dependency-loader.git'
+    website = 'https://github.com/brain-lv/gradle-plugin-distributed-dependency-loader'
+    description = 'A description of my Gradle plugin'
+    tags = ['plugin', 'gradle', 'example']
+}
+
+ */
